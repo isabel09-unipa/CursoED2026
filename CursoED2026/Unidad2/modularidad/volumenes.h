@@ -1,10 +1,10 @@
 #ifndef VOLUMENES_H
 #define VOLUMENES_H
 
-#include <math.h>
+#define PI 3.14159265358979323846
 
 float volumenEsfera(float radio){
-    return (4.0/3.0) * M_PI * radio * radio * radio;
+    return (4.0/3.0) * PI * radio * radio * radio;
 }
 
 float volumenCubo(float lado){
