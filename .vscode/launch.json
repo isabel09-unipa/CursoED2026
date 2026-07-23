@@ -27,11 +27,11 @@
       "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "C:\\MinGW\\bin",
+      "cwd": "${fileDirname}",
       "environment": [],
       "externalConsole": false,
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb.exe",
+      "miDebuggerPath": "C:\\mingw64\\bin\\gdb.exe",
       "setupCommands": [
         {
           "description": "Habilitar la impresión con sangría para gdb",
