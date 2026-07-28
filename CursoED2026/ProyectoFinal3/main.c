@@ -1,3 +1,7 @@
+// Sistema de Terminal Portuario - Proyecto de Estructuras de Datos
+// Hecho por: Estudiante
+// Fecha: 2026
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "destinos.h"
@@ -6,32 +10,40 @@
 #include "estadisticas.h"
 #include "utils.h"
 
+// funcion principal del programa
 int main(void) {
     int opcion = -1;
+    
+    // el menu se repite hasta que el usuario seleccione salir (opcion 0)
     do {
-        printf("\n--- Sistema de Gestion del Terminal Portuario Turistico de Buenaventura ---\n");
-        printf("1. Registrar destino\n");
-        printf("2. Registrar pasajero\n");
-        printf("3. Mostrar pasajeros por destino\n");
-        printf("4. Registrar viaje programado\n");
-        printf("5. Buscar viaje\n");
-        printf("6. Mostrar arbol de viajes\n");
-        printf("7. Realizar embarque\n");
-        printf("8. Consultar pasajero\n");
-        printf("9. Modificar destino\n");
-        printf("10. Mostrar todos los destinos\n");
-        printf("11. Mostrar estadisticas\n");
-        printf("0. Salir\n");
-        printf("Seleccione una opcion: ");
+        printf("\n================================\n");
+        printf("TERMINAL PORTUARIO BUENAVENTURA\n");
+        printf("================================\n");
+        printf("1. Agregar destino\n");
+        printf("2. Registrar un pasajero\n");
+        printf("3. Ver pasajeros por destino\n");
+        printf("4. Crear viaje\n");
+        printf("5. Buscar un viaje\n");
+        printf("6. Ver el arbol de viajes\n");
+        printf("7. Embarcar pasajero\n");
+        printf("8. Ver datos del pasajero\n");
+        printf("9. Cambiar info del destino\n");
+        printf("10. Listar todos los destinos\n");
+        printf("11. Ver estadisticas\n");
+        printf("0. SALIR\n");
+        printf("================================\n");
+        printf("Elige una opcion: ");
 
+        // leo la opcion del usuario
         if (scanf("%d", &opcion) != 1) {
             limpiarBuffer();
-            printf("Entrada invalida. Intente de nuevo.\n");
+            printf("ERROR! Escribe un numero valido.\n");
             opcion = -1;
             continue;
         }
         limpiarBuffer();
 
+        // dependiendo de lo que eligio, ejecuto una funcion u otra
         switch (opcion) {
             case 1:
                 registrarDestino();
@@ -67,14 +79,16 @@ int main(void) {
                 mostrarEstadisticas();
                 break;
             case 0:
+                // cuando es 0 sale del ciclo
                 break;
             default:
-                printf("Opcion invalida. Intente nuevamente.\n");
+                printf("Esa opcion no existe, intenta de nuevo!\n");
                 break;
         }
     } while (opcion != 0);
 
+    // cuando salimos, liberamos la memoria que usamos
     liberarDestinos();
-    printf("Memoria liberada. Saliendo del sistema.\n");
+    printf("\nMemoria limpiada... Adios!\n");
     return 0;
 }
