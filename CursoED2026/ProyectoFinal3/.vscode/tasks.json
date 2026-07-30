@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "version": "2.0.0",
     "tasks": [
         {
@@ -30,29 +29,4 @@
             }
         }
     ]
-=======
-    "tasks": [
-        {
-            "type": "cppbuild",
-            "label": "C/C++: gcc.exe compilar archivo activo",
-            "command": "C:\\mingw64\\bin\\gcc.exe",
-            "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
-            ],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": "build",
-            "detail": "Tarea generada por el depurador."
-        }
-    ],
-    "version": "2.0.0"
->>>>>>> 6c3dd7928132be7035d215ef7220ade728bb2425
 }
