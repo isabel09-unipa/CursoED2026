@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Compilar proyecto completo (gcc)",
+            "command": "gcc",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-std=c11",
+                "-g",
+                "-o",
+                "${workspaceFolder}\\terminal_buenaventura.exe",
+                "${workspaceFolder}\\main.c",
+                "${workspaceFolder}\\destinos.c",
+                "${workspaceFolder}\\pasajeros.c",
+                "${workspaceFolder}\\viajes.c",
+                "${workspaceFolder}\\estadisticas.c",
+                "${workspaceFolder}\\utils.c"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
